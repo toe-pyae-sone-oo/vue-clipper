@@ -1,28 +1,52 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <clipper
+      :width="image.width"
+      :height="image.height"
+      @image-cropped="showImage"
+    >
+      <img 
+        alt="Wallpaper" 
+        src="./assets/wallpaper.jpg" 
+        :width="image.width" 
+        :height="image.height"
+      />
+    </clipper>
+    <div v-if="croppedImage">
+      <p>Result:</p>
+      <img :src="croppedImage" />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import clipper from './lib/clipper';
 
 export default {
   name: 'App',
+
   components: {
-    HelloWorld
-  }
+    clipper,
+  },
+
+  data() {
+    return {
+      image: {
+        width: 1424,
+        height: 945,
+      },
+
+      croppedImage: undefined,
+    };
+  },
+
+  methods: {
+    showImage(img) {
+      this.croppedImage = img.url;
+    }
+  },
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
