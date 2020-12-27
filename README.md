@@ -52,3 +52,8 @@ export default {
 </script>
 ```
 
+## Screenshots
+
+![capturing](./public/capturing.png)
+
+![result](./public/result.png)
