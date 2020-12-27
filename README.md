@@ -6,13 +6,9 @@
 
 **Reference:** https://www.digitalocean.com/community/tutorials/vuejs-screenshot-ui
 
-## Project setup
+## Run Demo
 ```sh
 npm install
-```
-
-### Compiles and run demo
-```sh
 npm run serve
 ```
 
@@ -54,6 +50,10 @@ export default {
 
 ## Screenshots
 
+### Capturing
+
 ![capturing](./public/capturing.png)
+
+### Result
 
 ![result](./public/result.png)
