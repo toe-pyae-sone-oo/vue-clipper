@@ -20,11 +20,11 @@ Copy the `clipper.vue` from `src/lib` and paste somewhere inside your project.
 <template>
   <div>
     <clipper
-    	:width="500px"
+      :width="500px"
       :height="300px"
       @image-cropped="doSomething"       
     >
-			<!-- your elements -->
+      <!-- your elements -->
     </clipper>
   </div>
 </template>
@@ -42,8 +42,8 @@ export default {
         blob // image blob
       } = img;
       // ...
-		},
-	},
+    },
+  },
 };
 </script>
 ```
