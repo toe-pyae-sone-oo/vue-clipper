@@ -18,7 +18,7 @@ Copy the `clipper.vue` from `src/lib` and paste somewhere inside your project.
 
 ```html
 <template>
-	<div>
+  <div>
     <clipper
     	:width="500px"
       :height="300px"
